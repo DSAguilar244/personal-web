@@ -97,14 +97,8 @@
 
         <!-- Paginación -->
         <div class="pagination justify-content-center">
-            <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-            </ul>
-        </div>
-    </div>
+            <ul class="pagination"></ul>
+        </div>        
 
     <!-- Modales para los productos -->
     <!-- Modal Producto 1 -->
@@ -207,6 +201,55 @@
         } else if (path.includes("contact.html")) {
             document.getElementById("nav-contacto").classList.add("active");
         }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const productsPerPage = 12;
+        const products = document.querySelectorAll(".product-item");
+        const paginationContainer = document.querySelector(".pagination ul");
+        let currentPage = 1;
+
+        function showPage(page) {
+            const startIndex = (page - 1) * productsPerPage;
+            const endIndex = page * productsPerPage;
+
+            products.forEach((product, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+
+        function updatePagination() {
+            const totalPages = Math.ceil(products.length / productsPerPage);
+            paginationContainer.innerHTML = ""; // Limpiar la paginación
+
+            for (let i = 1; i <= totalPages; i++) {
+                const li = document.createElement("li");
+                li.classList.add("page-item");
+
+                const a = document.createElement("a");
+                a.classList.add("page-link");
+                a.href = "#";
+                a.textContent = i;
+
+                a.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    currentPage = i;
+                    showPage(currentPage);
+                    updatePagination();
+                });
+
+                li.appendChild(a);
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        // Inicializar la paginación
+        showPage(currentPage);
+        updatePagination();
     });
     </script>
 </body>
