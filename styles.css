@@ -109,7 +109,7 @@ body {
 }
 .carousel-item:hover .hero-text h1,
 .carousel-item:hover .hero-text p {
-    transform: scale(1.1);
+    transform: scale(1);
 }
 
 /* Product Cards */
@@ -228,4 +228,13 @@ body {
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+    .nav-link.active {
+        font-weight: bold;
+        color: #f8d210 !important; /* Mantiene el texto amarillo */
+    }
+    .nav-link.active::after {
+        display: none; /* Oculta la barra dorada */
+    }
 }

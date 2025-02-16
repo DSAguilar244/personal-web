@@ -164,6 +164,15 @@ body {
     bottom: -5px;
     transition: width 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+    .nav-link.active {
+        font-weight: bold;
+        color: #f8d210 !important; /* Mantiene el texto amarillo */
+    }
+    .nav-link.active::after {
+        display: none; /* Oculta la barra dorada */
+    }
+}
 
 /* Animations */
 @keyframes fadeInUp {
@@ -175,4 +184,34 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+/* Footer */
+.footer {
+    background-color: #222;
+    padding: 40px 0;
+    text-align: center;
+    color: #aaa;
+    transition: background-color 0.3s ease-in-out;
+}
+.footer:hover {
+    background-color: #1a1a1a;
+}
+.footer a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+.footer a:hover {
+    color: #ff3300;
+    transform: scale(1.1);
+}
+.social-icons a {
+    color: white;
+    font-size: 1.7rem;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+.social-icons a:hover {
+    color: #ff6600;
+    transform: rotate(15deg);
 }
