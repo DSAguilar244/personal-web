@@ -1,9 +1,11 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #001f3f; /* Fondo oscuro azul profundo */
     color: #ffffff; /* Texto blanco */
     transition: background-color 0.3s ease-in-out;
 }
+
 /* Navbar */
 .navbar {
     background-color: #002b4d; /* Azul más claro que el fondo */
@@ -44,12 +46,10 @@ body {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     filter: drop-shadow(2px 2px 5px rgba(0, 255, 255, 0.3)); /* Sombra acuática */
 }
-/* Efecto al pasar el mouse */
 .navbar-brand img:hover {
     transform: scale(1.2) rotate(5deg);
     filter: drop-shadow(4px 4px 8px rgba(0, 255, 255, 0.5));
 }
-/* Animación de entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -63,11 +63,11 @@ body {
 .navbar-brand img {
     animation: fadeIn 0.6s ease-out;
 }
+
 /* Contact Header */
 .contact-header {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin: 50px 0 40px;
     opacity: 0;
     transform: translateY(-20px);
     animation: fadeInUp 0.8s ease-in-out forwards;
@@ -80,20 +80,21 @@ body {
     font-size: 1.2rem;
     color: #ffffff; /* Texto blanco */
 }
+
 /* Contact Form */
 .contact-form .form-control {
     border-radius: 10px;
     padding-left: 20px;
     margin-bottom: 15px;
     background-color: #ffffff; /* Fondo blanco */
-    color: #333; /* Cambié el color de texto a gris oscuro para mayor visibilidad */
+    color: #333; /* Texto gris oscuro */
     border: 1px solid #555;
     transition: all 0.3s ease-in-out;
 }
 .contact-form .form-control:focus {
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo acuático */
     background-color: #002b4d; /* Fondo azul oscuro */
-    color: #ffffff; /* El texto será blanco al estar enfocado */
+    color: #ffffff; /* Texto blanco */
     border-color: #00ffff; /* Borde acuático */
     transform: scale(1.02);
 }
@@ -101,19 +102,20 @@ body {
     background-color: #ffffff; /* Aqua brillante */
     border: none;
     color: black;
-    padding: 12px 50px; /* Aumentamos el padding horizontal */
+    padding: 12px 50px;
     font-size: 1.1rem;
     border-radius: 10px;
-    width: 100%; /* Ocupará todo el ancho disponible */
+    width: 100%;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
     cursor: pointer;
-    text-align: center; /* Asegura que el texto esté centrado */
+    text-align: center;
 }
 .contact-form button:hover {
     background-color: #ffffff; /* Blanco */
-    transform: scale(1.05); /* Ligera animación al pasar el mouse */
+    transform: scale(1.05);
     color: black;
 }
+
 /* Contact Info */
 .contact-info {
     background-color: #002b4d; /* Azul oscuro */
@@ -140,6 +142,7 @@ body {
     color: #ffffff; /* Texto blanco */
     font-size: 1.1rem;
 }
+
 /* Social Icons */
 .social-icons a {
     font-size: 1.5rem;
@@ -151,6 +154,7 @@ body {
     color: #ffffff; /* Blanco */
     transform: rotate(15deg) scale(1.2);
 }
+
 /* Navbar Active Link */
 .nav-link.active {
     font-weight: bold;
@@ -168,14 +172,11 @@ body {
     transition: width 0.3s ease-in-out;
 }
 @media (max-width: 768px) {
-    .nav-link.active {
-        font-weight: bold;
-        color: #00ffff !important; /* Aqua brillante */
-    }
     .nav-link.active::after {
         display: none; /* Oculta la barra dorada */
     }
 }
+
 /* Animaciones */
 @keyframes fadeInUp {
     from {
@@ -187,6 +188,7 @@ body {
         transform: translateY(0);
     }
 }
+
 /* Footer */
 .footer {
     background-color: #002b4d; /* Azul oscuro */
@@ -207,20 +209,20 @@ body {
     color: #ffffff; /* Blanco */
     transform: scale(1.1);
 }
-/* Estilos generales para los modales */
+
+/* Modal Styles */
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
 }
-
 .modal-content {
     background-color: #fff;
     color: #333;
@@ -231,17 +233,14 @@ body {
     width: 90%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .modal-content h3 {
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
-
 .modal-content p {
     margin-bottom: 20px;
     font-size: 1rem;
 }
-
 .modal-content .btn {
     padding: 10px 20px;
     font-size: 1rem;
@@ -250,27 +249,24 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
-
 .modal-content .btn-primary {
     background-color: #00ffff; /* Aqua brillante */
     color: #000;
 }
-
 .modal-content .btn-primary:hover {
     background-color: #ffffff; /* Blanco */
     transform: scale(1.05);
 }
-
 .modal-content .btn-danger {
     background-color: #ff3300; /* Rojo */
     color: #fff;
 }
-
 .modal-content .btn-danger:hover {
     background-color: #ff6666; /* Rojo claro */
     transform: scale(1.05);
 }
-/* Estilo general del botón de WhatsApp */
+
+/* WhatsApp Button */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -280,7 +276,6 @@ body {
     align-items: flex-end;
     z-index: 1000;
 }
-
 .whatsapp-icon {
     background-color: #25D366;
     color: white;
@@ -295,11 +290,9 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }
-
 .whatsapp-icon:hover {
     transform: scale(1.1);
 }
-
 .whatsapp-tooltip {
     background-color: #25D366;
     color: white;
@@ -313,28 +306,33 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
     white-space: nowrap;
 }
-
 .whatsapp-button:hover .whatsapp-tooltip {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
-/* Ajustes para dispositivos móviles */
+/* Media Queries */
 @media (max-width: 768px) {
     .whatsapp-button {
-        bottom: 15px; /* Margen inferior más pequeño */
-        right: 15px; /* Margen derecho más pequeño */
+        bottom: 15px;
+        right: 15px;
     }
-
     .whatsapp-icon {
-        width: 50px; /* Tamaño más pequeño para móviles */
+        width: 50px;
         height: 50px;
-        font-size: 20px; /* Icono más pequeño */
+        font-size: 20px;
     }
-
     .whatsapp-tooltip {
-        font-size: 12px; /* Texto más pequeño */
-        padding: 6px 10px; /* Padding reducido */
+        font-size: 12px;
+        padding: 6px 10px;
     }
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff; /* Color Aqua brillante */
+    animation: textFadeIn 1.2s ease-in-out;
 }

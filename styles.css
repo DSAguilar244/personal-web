@@ -18,39 +18,7 @@ body:hover {
 .navbar:hover {
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
-/* Estilo para el Navbar */
-        .navbar {
-            background: linear-gradient(90deg, #007bff, #00bcd4);
-        }
 
-        /* Animación para Quiénes Somos */
-        @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        .about-us {
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* Efecto hover en botones */
-        .btn-primary:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Hero Text Styling */
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
@@ -97,7 +65,7 @@ body:hover {
         opacity: 0;
         transform: scale(0.8);
     }
-    to {
+    to { 
         opacity: 1;
         transform: scale(1);
     }
@@ -193,7 +161,7 @@ body:hover {
 
 /* Botón */
 .btn-primary {
-    background-color: #ffffff; /* Aqua brillante */
+    background-color: #00ffff; /* Aqua brillante */
     border: none;
     padding: 10px 20px;
     font-size: 1.1rem;
@@ -238,6 +206,18 @@ body:hover {
 }
 
 /* Media Queries */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+    .product-card img {
+        height: 180px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-text h1 {
         font-size: 2.5rem;
@@ -248,124 +228,44 @@ body:hover {
     .product-card img {
         height: 150px;
     }
-}
-
-/* Navbar Active Link */
-.nav-link.active {
-    font-weight: bold;
-    color: #00ffff !important; /* Aqua brillante */
-    position: relative;
-}
-.nav-link.active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #00ffff; /* Aqua brillante */
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s ease-in-out;
-}
-@media (max-width: 768px) {
-    .nav-link.active {
-        font-weight: bold;
-        color: #00ffff !important; /* Mantiene el texto aqua */
-    }
-    .nav-link.active::after {
-        display: none; /* Oculta la barra dorada */
-    }
-}
-/* Variables de color */
-:root {
-    --primary-color: #007bff; /* Azul principal */
-    --secondary-color: #6c757d; /* Gris secundario */
-    --hover-color: #0056b3; /* Azul oscuro para hover */
-}
-
-/* Personalización de botones */
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--hover-color);
-    border-color: var(--hover-color);
-}
-
-/* Carrusel */
-.carousel-item img {
-    border-radius: 10px; /* Bordes redondeados */
-    filter: brightness(80%); /* Oscurecer ligeramente la imagen */
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Tipografía */
-h1 {
-    font-size: 2.5rem; /* Escritorio */
-    line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem; /* Móvil */
-    }
-}
-
-p {
-    line-height: 1.6; /* Espaciado entre líneas */
-}
-
-/* Footer */
-footer {
-    font-size: 0.9rem;
-}
-
-footer iframe {
-    border-radius: 10px;
-}
-/* Estilo para la sección Quiénes Somos */
-#about-us {
-    padding: 50px 0;
-}
-
-#about-us .row {
-    align-items: center; /* Alinea verticalmente el texto y la imagen */
-}
-
-/* Estilo personalizado para la imagen */
-.custom-image {
-    max-width: 50%; /* Reducir el tamaño de la imagen */
-    height: auto; /* Mantener la proporción de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 0 auto; /* Centrar la imagen horizontalmente */
-    display: block; /* Necesario para centrar con margin */
-}
-
-/* Ajuste para pantallas pequeñas (responsive) */
-@media (max-width: 768px) {
-    #about-us .col-md-6 {
-        text-align: center; /* Centra el texto en dispositivos móviles */
-    }
-
     .custom-image {
         max-width: 80%; /* Aumentar el tamaño en pantallas pequeñas */
         margin-top: 20px; /* Espaciado entre el texto y la imagen en dispositivos móviles */
     }
 }
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .product-card img {
+        height: 120px;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+/* Estilo general para la sección Quiénes Somos */
+#about-us {
+    padding: 50px 0;
+    background-color: #001f3f; /* Fondo oscuro azul profundo */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 15px; /* Espaciado interno */
+}
+
+/* Título */
 #about-us h2 {
     font-family: 'Oswald', sans-serif;
     font-size: 2.8rem;
@@ -374,7 +274,15 @@ footer iframe {
     color: #00ffff; /* Color Aqua brillante */
     animation: textFadeIn 1.2s ease-in-out;
 }
-
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff; /* Color Aqua brillante */
+    animation: textFadeIn 1.2s ease-in-out;
+}
+/* Párrafos */
 #about-us p {
     font-family: 'Roboto', sans-serif;
     text-align: justify; /* Justifica el texto */
@@ -384,11 +292,50 @@ footer iframe {
     margin-bottom: 20px;
     animation: textFadeIn 1.5s ease-in-out;
 }
-h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #00ffff; /* Color Aqua brillante */
-    animation: textFadeIn 1.2s ease-in-out;
+
+/* Imagen personalizada */
+.custom-image {
+    max-width: 100%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantener la proporción de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    display: block; /* Necesario para centrar con margin */
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
+    transition: transform 0.3s ease-in-out;
+}
+.custom-image:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Animación de entrada */
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #about-us .row {
+        flex-direction: column; /* Apila las columnas verticalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    #about-us h2 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+    }
+
+    #about-us p {
+        font-size: 1.2rem; /* Reduce el tamaño del párrafo */
+    }
+
+    .custom-image {
+        max-width: 80%; /* Aumenta el tamaño de la imagen en pantallas pequeñas */
+        margin-top: 20px; /* Espaciado entre el texto y la imagen */
+    }
 }
