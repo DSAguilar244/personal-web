@@ -1,35 +1,34 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: #001f3f; /* Fondo oscuro azul profundo */
+    color: #ffffff; /* Texto blanco */
     transition: background-color 0.3s ease-in-out;
 }
-
 /* Navbar */
 .navbar {
-    background-color: #222;
+    background-color: #002b4d; /* Azul más claro que el fondo */
     padding: 1rem;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s;
 }
 .navbar:hover {
-    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
-    color: #fff;
+    color: #00ffff; /* Aqua brillante */
     transition: color 0.3s;
 }
 .navbar-brand:hover {
-    color: #ff6600;
+    color: #ffffff; /* Blanco al pasar el mouse */
 }
 .navbar-nav .nav-link {
-    color: #fff;
+    color: #ffffff; /* Texto blanco */
     font-size: 1.1rem;
     transition: color 0.3s, transform 0.2s ease-in-out;
 }
 .navbar-nav .nav-link:hover {
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     transform: scale(1.1);
 }
 .navbar-nav .nav-item i {
@@ -43,15 +42,13 @@ body {
     width: 60px; /* Tamaño más grande */
     height: auto; /* Mantiene la proporción */
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra elegante */
+    filter: drop-shadow(2px 2px 5px rgba(0, 255, 255, 0.3)); /* Sombra acuática */
 }
-
 /* Efecto al pasar el mouse */
 .navbar-brand img:hover {
     transform: scale(1.2) rotate(5deg);
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 8px rgba(0, 255, 255, 0.5));
 }
-
 /* Animación de entrada */
 @keyframes fadeIn {
     from {
@@ -63,14 +60,12 @@ body {
         transform: scale(1);
     }
 }
-
 .navbar-brand img {
     animation: fadeIn 0.6s ease-out;
 }
-
 /* Product Cards */
 .product-card {
-    background-color: #2a2a2a;
+    background-color: #002b4d; /* Azul oscuro */
     border: none;
     border-radius: 15px;
     overflow: hidden;
@@ -81,13 +76,13 @@ body {
 }
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
 .product-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #00ffff; /* Borde acuático */
     transition: transform 0.3s ease-in-out;
 }
 .product-card:hover img {
@@ -110,27 +105,27 @@ body {
     transition: color 0.3s;
 }
 .product-card .card-title:hover {
-    color: #f8d210;
+    color: #00ffff; /* Aqua brillante */
 }
 .product-card .card-text {
     font-size: 1.1rem;
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     flex-grow: 1; /* Expande el texto para que las tarjetas se vean iguales */
 }
-
 /* Buttons */
 .btn-primary {
-    background-color: #ff6600;
+    background-color: #ffffff; /* Aqua brillante */
     border: none;
+    color: black;
     padding: 10px 20px;
     font-size: 1.1rem;
     transition: background-color 0.3s, transform 0.2s;
 }
 .btn-primary:hover {
-    background-color: #ff3300;
+    background-color: #ffffff; /* Blanco */
     transform: scale(1.1);
+    color: black;
 }
-
 /* Search Bar */
 .search-bar {
     margin: 20px 0;
@@ -141,29 +136,28 @@ body {
     transition: box-shadow 0.3s ease-in-out;
 }
 .search-bar .form-control:focus {
-    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Brillo acuático */
 }
 .search-bar .bi-search {
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
 }
-
 /* Category Filter */
 .category-filter {
-    background-color: #222;
+    background-color: #002b4d; /* Azul oscuro */
     padding: 15px;
     margin-bottom: 30px;
     border-radius: 10px;
     transition: box-shadow 0.3s ease-in-out;
 }
 .category-filter:hover {
-    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
 .category-filter select {
-    background-color: #333;
+    background-color: #001f3f; /* Azul profundo */
     color: white;
     border: none;
     border-radius: 5px;
@@ -171,32 +165,30 @@ body {
     transition: background-color 0.3s;
 }
 .category-filter select:hover {
-    background-color: #444;
+    background-color: #003366; /* Azul más claro */
 }
 .category-filter label {
-    color: #fff;
+    color: #ffffff; /* Texto blanco */
     font-size: 1.1rem;
 }
-
 /* Pagination */
 .pagination .page-item.active .page-link {
-    background-color: #ff6600;
-    border-color: #ff6600;
+    background-color: #00ffff; /* Aqua brillante */
+    border-color: #00ffff; /* Aqua brillante */
 }
 .pagination .page-link {
-    color: #fff;
-    background-color: #333;
+    color: #ffffff; /* Texto blanco */
+    background-color: #002b4d; /* Azul oscuro */
     border: none;
     transition: background-color 0.3s ease-in-out;
 }
 .pagination .page-link:hover {
-    background-color: #ff6600;
+    background-color: #00ffff; /* Aqua brillante */
 }
-
 /* Navbar Active Link */
 .nav-link.active {
     font-weight: bold;
-    color: #f8d210 !important;
+    color: #00ffff !important; /* Aqua brillante */
     position: relative;
 }
 .nav-link.active::after {
@@ -204,7 +196,7 @@ body {
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #f8d210;
+    background-color: #00ffff; /* Aqua brillante */
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease-in-out;
@@ -212,13 +204,12 @@ body {
 @media (max-width: 768px) {
     .nav-link.active {
         font-weight: bold;
-        color: #f8d210 !important; /* Mantiene el texto amarillo */
+        color: #00ffff !important; /* Aqua brillante */
     }
     .nav-link.active::after {
         display: none; /* Oculta la barra dorada */
     }
 }
-
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -232,22 +223,22 @@ body {
 }
 /* Footer */
 .footer {
-    background-color: #222;
+    background-color: #002b4d; /* Azul oscuro */
     padding: 40px 0;
     text-align: center;
-    color: #aaa;
+    color: #ffffff; /* Texto blanco */
     transition: background-color 0.3s ease-in-out;
 }
 .footer:hover {
-    background-color: #1a1a1a;
+    background-color: #001f3f; /* Azul profundo */
 }
 .footer a {
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.2s;
 }
 .footer a:hover {
-    color: #ff3300;
+    color: #ffffff; /* Blanco */
     transform: scale(1.1);
 }
 .social-icons a {
@@ -257,6 +248,9 @@ body {
     transition: color 0.3s ease-in-out, transform 0.2s;
 }
 .social-icons a:hover {
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     transform: rotate(15deg);
 }
+.search-bar .bi-search  {
+    color: black;
+}	

@@ -1,55 +1,94 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #1e1e1e;
-    color: #fff;
-    transition: background-color 0.3s ease-in-out;
+    background-color: #001f3f; /* Fondo oscuro azul profundo */
+    color: #ffffff; /* Texto blanco */
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+body:hover {
+    background-color: #003366; /* Cambio sutil al pasar el mouse sobre el body */
 }
 
 /* Navbar */
 .navbar {
-    background-color: #222;
+    background-color: #002b4d; /* Azul más claro que el fondo */
     padding: 1rem;
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s;
 }
 .navbar:hover {
-    box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
+/* Estilo para el Navbar */
+        .navbar {
+            background: linear-gradient(90deg, #007bff, #00bcd4);
+        }
+
+        /* Animación para Quiénes Somos */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .about-us {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Efecto hover en botones */
+        .btn-primary:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hero Text Styling */
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
-    color: #fff;
-    transition: color 0.3s;
+    color: #00ffff; /* Aqua brillante */
+    transition: color 0.3s, transform 0.3s ease-in-out;
 }
 .navbar-brand:hover {
-    color: #ff6600;
+    color: #ffffff; /* Blanco al pasar el mouse */
+    transform: scale(1.05);
 }
+
 .navbar-nav .nav-link {
-    color: #fff;
+    color: #ffffff; /* Texto blanco */
     font-size: 1.1rem;
     transition: color 0.3s, transform 0.2s ease-in-out;
 }
 .navbar-nav .nav-link:hover {
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     transform: scale(1.1);
 }
+
 .navbar-nav .nav-item i {
     margin-right: 8px;
     transition: transform 0.3s ease-in-out;
 }
 .navbar-nav .nav-link:hover i {
-    transform: rotate(10deg);
-}
-.navbar-brand img {
-    width: 60px; /* Tamaño más grande */
-    height: auto; /* Mantiene la proporción */
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Sombra elegante */
+    transform: rotate(15deg); /* Rotación suave */
 }
 
-/* Efecto al pasar el mouse */
+.navbar-brand img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: drop-shadow(2px 2px 5px rgba(0, 255, 255, 0.5)); /* Sombra acuática */
+}
 .navbar-brand img:hover {
-    transform: scale(1.2) rotate(5deg);
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(4px 4px 8px rgba(0, 255, 255, 0.7));
 }
 
 /* Animación de entrada */
@@ -63,11 +102,9 @@ body {
         transform: scale(1);
     }
 }
-
 .navbar-brand img {
     animation: fadeIn 0.6s ease-out;
 }
-
 
 /* Carousel */
 .carousel-item img {
@@ -79,6 +116,7 @@ body {
 .carousel-item:hover img {
     transform: scale(1.05);
 }
+
 .hero-text {
     position: absolute;
     top: 50%;
@@ -86,7 +124,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 26, 51, 0.7); /* Fondo semi-transparente azul */
     padding: 20px;
     border-radius: 10px;
     transition: background 0.3s ease, transform 0.3s ease-in-out;
@@ -103,18 +141,18 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 .carousel-item:hover .hero-text {
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 26, 51, 0.9); /* Fondo más oscuro */
+    box-shadow: 0px 0px 30px rgba(0, 255, 255, 0.5); /* Brillo acuático */
     transform: translate(-50%, -48%);
 }
 .carousel-item:hover .hero-text h1,
 .carousel-item:hover .hero-text p {
-    transform: scale(1);
+    transform: scale(1.05);
 }
 
 /* Product Cards */
 .product-card {
-    background-color: #2a2a2a;
+    background-color: #002b4d; /* Azul oscuro */
     border: none;
     border-radius: 15px;
     overflow: hidden;
@@ -125,12 +163,12 @@ body {
 }
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
 .product-card img {
-    height: 200px; /* Ajusta según necesites */
-    object-fit: cover; /* Evita deformaciones */
-    border-bottom: 1px solid #444;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #00ffff; /* Borde acuático */
     transition: transform 0.3s ease-in-out;
 }
 .product-card:hover img {
@@ -138,65 +176,64 @@ body {
 }
 .product-card .card-body {
     padding: 1.5rem;
-    flex-grow: 1; /* Esto asegura que los elementos internos crezcan uniformemente */
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.product-card .card-title, 
-.product-card .card-text {
-    color: white;
-}
 .product-card .card-title {
     font-size: 1.3rem;
     font-weight: bold;
+    color: #ffffff;
 }
 .product-card .card-text {
     font-size: 1.1rem;
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
 }
 
 /* Botón */
 .btn-primary {
-    background-color: #ff6600;
+    background-color: #ffffff; /* Aqua brillante */
     border: none;
     padding: 10px 20px;
     font-size: 1.1rem;
+    color: black;
     transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 .btn-primary:hover {
-    background-color: #ff3300;
+    background-color: #ffffff; /* Blanco al pasar el mouse */
+    color: #002b4d; /* Texto azul oscuro */
     transform: scale(1.1);
 }
 
 /* Footer */
 .footer {
-    background-color: #222;
+    background-color: #002b4d; /* Azul oscuro */
     padding: 40px 0;
     text-align: center;
-    color: #aaa;
+    color: #ffffff; /* Texto blanco */
     transition: background-color 0.3s ease-in-out;
 }
 .footer:hover {
-    background-color: #1a1a1a;
+    background-color: #001f3f; /* Azul más oscuro */
 }
 .footer a {
-    color: #ff6600;
+    color: #00ffff; /* Aqua brillante */
     text-decoration: none;
     transition: color 0.3s ease-in-out, transform 0.2s;
 }
 .footer a:hover {
-    color: #ff3300;
+    color: #ffffff; /* Blanco al pasar el mouse */
     transform: scale(1.1);
 }
 .social-icons a {
-    color: white;
+    color: #00ffff; /* Aqua brillante */
     font-size: 1.7rem;
     margin: 0 15px;
     transition: color 0.3s ease-in-out, transform 0.2s;
 }
 .social-icons a:hover {
-    color: #ff6600;
+    color: #ffffff; /* Blanco al pasar el mouse */
     transform: rotate(15deg);
 }
 
@@ -216,7 +253,7 @@ body {
 /* Navbar Active Link */
 .nav-link.active {
     font-weight: bold;
-    color: #f8d210 !important;
+    color: #00ffff !important; /* Aqua brillante */
     position: relative;
 }
 .nav-link.active::after {
@@ -224,7 +261,7 @@ body {
     position: absolute;
     width: 100%;
     height: 3px;
-    background-color: #f8d210;
+    background-color: #00ffff; /* Aqua brillante */
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease-in-out;
@@ -232,9 +269,126 @@ body {
 @media (max-width: 768px) {
     .nav-link.active {
         font-weight: bold;
-        color: #f8d210 !important; /* Mantiene el texto amarillo */
+        color: #00ffff !important; /* Mantiene el texto aqua */
     }
     .nav-link.active::after {
         display: none; /* Oculta la barra dorada */
     }
+}
+/* Variables de color */
+:root {
+    --primary-color: #007bff; /* Azul principal */
+    --secondary-color: #6c757d; /* Gris secundario */
+    --hover-color: #0056b3; /* Azul oscuro para hover */
+}
+
+/* Personalización de botones */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+/* Carrusel */
+.carousel-item img {
+    border-radius: 10px; /* Bordes redondeados */
+    filter: brightness(80%); /* Oscurecer ligeramente la imagen */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Tipografía */
+h1 {
+    font-size: 2.5rem; /* Escritorio */
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Móvil */
+    }
+}
+
+p {
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+}
+
+footer iframe {
+    border-radius: 10px;
+}
+/* Estilo para la sección Quiénes Somos */
+#about-us {
+    padding: 50px 0;
+}
+
+#about-us .row {
+    align-items: center; /* Alinea verticalmente el texto y la imagen */
+}
+
+/* Estilo personalizado para la imagen */
+.custom-image {
+    max-width: 50%; /* Reducir el tamaño de la imagen */
+    height: auto; /* Mantener la proporción de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    display: block; /* Necesario para centrar con margin */
+}
+
+/* Ajuste para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+    #about-us .col-md-6 {
+        text-align: center; /* Centra el texto en dispositivos móviles */
+    }
+
+    .custom-image {
+        max-width: 80%; /* Aumentar el tamaño en pantallas pequeñas */
+        margin-top: 20px; /* Espaciado entre el texto y la imagen en dispositivos móviles */
+    }
+}
+#about-us h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff; /* Color Aqua brillante */
+    animation: textFadeIn 1.2s ease-in-out;
+}
+
+#about-us p {
+    font-family: 'Roboto', sans-serif;
+    text-align: justify; /* Justifica el texto */
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #ffffff;
+    margin-bottom: 20px;
+    animation: textFadeIn 1.5s ease-in-out;
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00ffff; /* Color Aqua brillante */
+    animation: textFadeIn 1.2s ease-in-out;
 }

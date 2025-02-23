@@ -14,50 +14,48 @@
     <link rel="icon" type="image/png" href="static/icons/AquaTechlogo.png">
 </head>
 <body>
-
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="static/icons/AquaTechlogo.png" alt="Logo AquaTech" class="me-2">
-            AquaTech
-        </a>        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a id="nav-inicio" class="nav-link" href="index.html">
-                        <i class="bi bi-house-door"></i> Inicio
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a id="nav-productos" class="nav-link" href="paginas/product/product.html">
-                        <i class="bi bi-laptop"></i> Productos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a id="nav-servicios" class="nav-link" href="paginas/services/services.html">
-                        <i class="bi bi-tools"></i> Servicios
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a id="nav-contacto" class="nav-link" href="paginas/contac/contact.html">
-                        <i class="bi bi-envelope"></i> Contacto
-                    </a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="static/icons/AquaTechlogo.png" alt="Logo AquaTech" class="me-2" style="width: 30px;">
+                AquaTech
+            </a>        
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a id="nav-inicio" class="nav-link" href="index.html">
+                            <i class="bi bi-house-door"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-productos" class="nav-link" href="paginas/product/product.html">
+                            <i class="bi bi-laptop"></i> Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-servicios" class="nav-link" href="paginas/services/services.html">
+                            <i class="bi bi-tools"></i> Servicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="nav-contacto" class="nav-link" href="paginas/contac/contact.html">
+                            <i class="bi bi-envelope"></i> Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
+    </nav>
 
     <!-- Hero Section with Carousel -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="static/img/fondo-1.png" class="d-block w-100" alt="Carousel 1">
+                <img src="static/img/fondo-1.jpg" class="d-block w-100" alt="Carousel 1">
                 <div class="hero-text">
                     <h1>Descubre la Tecnología del Futuro</h1>
                     <p>Encuentra productos innovadores con diseño y calidad garantizados.</p>
@@ -76,96 +74,118 @@
                 <img src="static/img/fondo-3.jpg" class="d-block w-100" alt="Carousel 3">
                 <div class="hero-text">
                     <h1>¡Equipos de Alta Tecnología!</h1>
-                    <p>Compra tus dispositivos tecnológicos con la mejor garantía.</p>
+                    <p>Compra tus dispositivos tecnológicos al mejor precio.</p>
                     <a href="paginas/product/product.html" class="btn btn-primary btn-lg">Explorar Productos</a>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev" aria-label="Anterior">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next" aria-label="Siguiente">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!-- Quiénes Somos Section -->
+    <section id="about-us" class="container py-5 about-us">
+        <h2 class="text-center mb-4">Quiénes Somos</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="lead">En AquaTech, somos apasionados por la tecnología y la innovación. Nuestro objetivo es proporcionar soluciones tecnológicas de alta calidad para satisfacer las necesidades de nuestros clientes.</p>
+                <p>Nuestro equipo está formado por expertos en tecnología que trabajan incansablemente para ofrecer productos y servicios excepcionales. ¡Confía en nosotros para llevar tu negocio al siguiente nivel!</p>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="static/img/equipo-trabajo.jpg" class="img-fluid rounded custom-image" alt="Equipo AquaTech">
+            </div>
+        </div>
+    </section>
 
     <!-- Servicios Section -->
-<div id="servicios" class="container py-5">
-    <h2 class="text-center mb-4">Nuestros Servicios</h2>
-    <div class="row d-flex align-items-stretch">
-        <!-- Servicio 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card product-card">
-                <img src="static/img/service-windows.png" class="card-img-top" alt="Instalación de Programas, Office y Windows">
-                <div class="card-body">
-                    <h5 class="card-title">Instalación de Programas, Office y Windows</h5>
-                    <p class="card-text">Instalación profesional de software, incluyendo Windows y Office.</p>
-                    <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+    <div id="servicios" class="container py-5">
+        <h2 class="text-center mb-4">Nuestros Servicios</h2>
+        <div class="row d-flex align-items-stretch">
+            <!-- Servicio 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="static/img/service-windows.jpg" class="card-img-top" alt="Instalación de Programas, Office y Windows">
+                    <div class="card-body">
+                        <h5 class="card-title">Instalación de Programas, Office y Windows</h5>
+                        <p class="card-text">Instalación profesional de software, incluyendo Windows y Office.</p>
+                        <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Servicio 2 -->
-        <div class="col-md-4 mb-4">
-            <div class="card product-card">
-                <img src="static/img/service-maintenance.jpg" class="card-img-top" alt="Mantenimiento de PC y Laptops">
-                <div class="card-body">
-                    <h5 class="card-title">Mantenimiento de PC y Laptops</h5>
-                    <p class="card-text">Revisión y optimización de tus dispositivos para un rendimiento superior.</p>
-                    <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+            <!-- Servicio 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="static/img/service-maintenance.jpg" class="card-img-top" alt="Mantenimiento de PC y Laptops">
+                    <div class="card-body">
+                        <h5 class="card-title">Mantenimiento de PC y Laptops</h5>
+                        <p class="card-text">Revisión y optimización de tus dispositivos para un rendimiento superior.</p>
+                        <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Servicio 3 -->
-        <div class="col-md-4 mb-4">
-            <div class="card product-card">
-                <img src="static/img/service-remote.jpg" class="card-img-top" alt="Soporte Remoto">
-                <div class="card-body">
-                    <h5 class="card-title">Soporte Remoto</h5>
-                    <p class="card-text">Asistencia técnica a distancia para resolver tus problemas sin salir de casa.</p>
-                    <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+            <!-- Servicio 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    <img src="static/img/remote-service.jpg" class="card-img-top" alt="Soporte Remoto">
+                    <div class="card-body">
+                        <h5 class="card-title">Soporte Remoto</h5>
+                        <p class="card-text">Asistencia técnica a distancia para resolver tus problemas sin salir de casa.</p>
+                        <a href="https://wa.me/+593963301897" class="btn btn-primary mt-auto" target="_blank">Contactarme</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="bg-dark text-white py-4">
         <div class="container">
-            <div class="social-icons mb-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p><i class="bi bi-geo-alt"></i> Dirección: Manuel Serrano entre Tarqui y Colón</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: (+593) 963301897</p>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.776459988449!2d-78.50599298522297!3d-0.22023599988788668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a6c8b8e4c5f%3A0x9b8b8b8b8b8b8b8b!2sManuel%20Serrano%2C%20Quito!5e0!3m2!1sen!2sec!4v1698765432109!5m2!1sen!2sec" 
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://wa.me/+593963301897" class="btn btn-success btn-lg" target="_blank">
+                    ¡Contáctanos ahora!
+                </a>
+            </div>
+            <div class="social-icons mt-4 text-center">
                 <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
                 <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
             </div>
-            <p>&copy; 2025 AquaTech. Todos los derechos reservados. <a href="#">Política de Privacidad</a></p>
+            <p class="text-center mt-3">&copy; 2025 AquaTech. Todos los derechos reservados. <a href="#">Política de Privacidad</a></p>
         </div>
-    </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Obtener la URL actual
-        let path = window.location.pathname;
-
-        // Remover la clase 'active' de todos los enlaces
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
+        document.addEventListener("DOMContentLoaded", function () {
+            let path = window.location.pathname;
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            if (path.includes("index.html")) {
+                document.getElementById("nav-inicio").classList.add("active");
+            } else if (path.includes("product.html")) {
+                document.getElementById("nav-productos").classList.add("active");
+            } else if (path.includes("services.html")) {
+                document.getElementById("nav-servicios").classList.add("active");
+            } else if (path.includes("contact.html")) {
+                document.getElementById("nav-contacto").classList.add("active");
+            }
         });
-
-        // Asociar la URL con el enlace correspondiente
-        if (path.includes("index.html")) {
-            document.getElementById("nav-inicio").classList.add("active");
-        } else if (path.includes("product.html")) {
-            document.getElementById("nav-productos").classList.add("active");
-        } else if (path.includes("services.html")) {
-            document.getElementById("nav-servicios").classList.add("active");
-        } else if (path.includes("contact.html")) {
-            document.getElementById("nav-contacto").classList.add("active");
-        }
-    });
     </script>
 </body>
 </html>
