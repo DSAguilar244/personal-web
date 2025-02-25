@@ -1,67 +1,112 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #001f3f; /* Fondo oscuro azul profundo */
     color: #ffffff; /* Texto blanco */
-    transition: background-color 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
+
+/* Hover en el body (opcional) */
+body:hover {
+    background-color: #003366; /* Cambio sutil al pasar el mouse sobre el body */
+}
+
 /* Navbar */
 .navbar {
-    background-color: #002b4d; /* Azul más claro que el fondo */
-    padding: 1rem;
+    background: linear-gradient(135deg, #002b4d, #003e6e); /* Gradiente suave */
+    padding: 1rem 1.5rem; /* Más espacio horizontal */
+    border-bottom: 2px solid rgba(0, 255, 255, 0.2); /* Borde acuático sutil */
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s;
 }
+
 .navbar:hover {
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3); /* Sombra acuática */
 }
+
 .navbar-brand {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
     color: #00ffff; /* Aqua brillante */
-    transition: color 0.3s;
+    text-transform: uppercase; /* Texto en mayúsculas para un estilo más moderno */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s, transform 0.3s ease-in-out;
 }
+
 .navbar-brand:hover {
     color: #ffffff; /* Blanco al pasar el mouse */
+    transform: scale(1.05);
 }
+
 .navbar-nav .nav-link {
     color: #ffffff; /* Texto blanco */
     font-size: 1.1rem;
+    font-weight: 500; /* Más peso para mejorar la legibilidad */
+    padding: 0.75rem 1rem; /* Espaciado interno */
     transition: color 0.3s, transform 0.2s ease-in-out;
 }
+
 .navbar-nav .nav-link:hover {
     color: #00ffff; /* Aqua brillante */
     transform: scale(1.1);
 }
+
 .navbar-nav .nav-item i {
     margin-right: 8px;
-    transition: transform 0.3s ease-in-out;
+    font-size: 1.2rem; /* Íconos ligeramente más grandes */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
 .navbar-nav .nav-link:hover i {
-    transform: rotate(10deg);
+    transform: rotate(15deg); /* Rotación suave */
+    color: #00ffff; /* Cambio de color al hacer hover */
 }
+
 .navbar-brand img {
-    width: 60px; /* Tamaño más grande */
-    height: auto; /* Mantiene la proporción */
+    width: 60px;
+    height: auto;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    filter: drop-shadow(2px 2px 5px rgba(0, 255, 255, 0.3)); /* Sombra acuática */
+    filter: drop-shadow(2px 2px 5px rgba(0, 255, 255, 0.5)); /* Sombra acuática */
 }
-/* Efecto al pasar el mouse */
+
 .navbar-brand img:hover {
-    transform: scale(1.2) rotate(5deg);
-    filter: drop-shadow(4px 4px 8px rgba(0, 255, 255, 0.5));
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(4px 4px 8px rgba(0, 255, 255, 0.7));
 }
+
 /* Animación de entrada */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: scale(0.8);
     }
-    to {
+    to { 
         opacity: 1;
         transform: scale(1);
     }
 }
+
 .navbar-brand img {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Mejoras para móviles */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Tamaño reducido para pantallas pequeñas */
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-collapse {
+        background: linear-gradient(135deg, #002b4d, #003e6e); /* Mismo gradiente que el navbar */
+        border-radius: 10px; /* Bordes redondeados */
+        margin-top: 10px;
+    }
 }
 /* Service Cards */
 .service-card {
