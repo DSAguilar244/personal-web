@@ -58,81 +58,10 @@
         </div>
 
         <h2 class="text-center mb-4">Servicios Disponibles</h2>
-<div class="row" id="servicios">
-    <!-- Servicio 1 -->
-    <div class="col-md-4 mb-4 service-item">
-        <div class="card service-card">
-            <img src="../../static/img/service-laptop.webp" class="card-img-top" alt="Servicio 1">
-            <div class="card-body">
-                <h5 class="card-title">Reparación de Laptops</h5>
-                <p class="card-text">Ofrecemos servicios de reparación y mantenimiento de laptops de todas las marcas.</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceModal1">Más Información</button>
-            </div>
-        </div>
-    </div>
+<div class="row" id="servicios"></div>
 
-    <!-- Servicio 2 -->
-    <div class="col-md-4 mb-4 service-item">
-        <div class="card service-card">
-            <img src="../../static/img/suport-remote.webp" class="card-img-top" alt="Servicio 2">
-            <div class="card-body">
-                <h5 class="card-title">Soporte Técnico Remoto</h5>
-                <p class="card-text">Brindamos soporte técnico a distancia para resolver cualquier problema informático.</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceModal2">Más Información</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Modales para los servicios -->
-    <!-- Modal Servicio 1 -->
-    <div class="modal fade" id="serviceModal1" tabindex="-1" aria-labelledby="serviceModal1Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #333; color: white;">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="serviceModal1Label">Reparación de Laptops</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Características del servicio:</h6>
-                    <ul>
-                        <li>Reparación de hardware y software</li>
-                        <li>Instalación y configuración de sistemas operativos</li>
-                        <li>Reemplazo de piezas dañadas</li>
-                    </ul>
-                    <p><strong>Precio:</strong> Desde $20</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://wa.me/+593963301897" class="btn btn-primary" target="_blank">Solicitar vía WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Servicio 2 -->
-    <div class="modal fade" id="serviceModal2" tabindex="-1" aria-labelledby="serviceModal2Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content" style="background-color: #333; color: white;">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="serviceModal2Label">Soporte Técnico Remoto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6>Características del servicio:</h6>
-                    <ul>
-                        <li>Asistencia remota en problemas informáticos</li>
-                        <li>Diagnóstico y solución de errores</li>
-                        <li>Instalación y actualización de software</li>
-                    </ul>
-                    <p><strong>Precio:</strong> $10 por sesión</p>
-                </div>
-                <div class="modal-footer">
-                    <a href="https://wa.me/+593963301897" class="btn btn-primary" target="_blank">Solicitar vía WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Contenedor para modales -->
+<div id="modales"></div>
 
     <!-- Footer -->
     <footer>
@@ -187,5 +116,160 @@
         }
     });
     </script>
+
+<script>
+    const servicios = [
+    {
+        id: 1,
+        titulo: "Mantenimiento y Reparación de Laptops",
+        descripcion: "Servicio especializado en la reparación y mantenimiento de laptops de todas las marcas.",
+        imagen: "../../static/img/service-laptop.webp",
+        detalles: [
+            "Reparación de hardware y software",
+            "Limpieza interna y externa",
+            "Reemplazo de piezas dañadas"
+        ],
+        precio: "Desde $20"
+    },
+    {
+        id: 2,
+        titulo: "Soporte Técnico Remoto",
+        descripcion: "Brindamos soporte técnico a distancia para resolver cualquier problema informático.",
+        imagen: "../../static/img/suport-remote.webp",
+        detalles: [
+            "Asistencia remota en problemas informáticos",
+            "Diagnóstico y solución de errores",
+            "Instalación y actualización de software"
+        ],
+        precio: "$10 por sesión"
+    },
+    {
+        id: 3,
+        titulo: "Mantenimiento y Reparación de PC",
+        descripcion: "Revisión y reparación de computadoras de escritorio para garantizar su correcto funcionamiento.",
+        imagen: "../../static/img/3.webp",
+        detalles: [
+            "Instalación de piezas y componentes",
+            "Limpieza interna y externa",
+            "Optimización del rendimiento del sistema"
+        ],
+        precio: "Desde $15"
+    },
+    {
+    id: 4,
+    titulo: "Mantenimiento de Impresoras",
+    descripcion: "Revisión, reparación y mantenimiento de impresoras de diferentes marcas y modelos.",
+    imagen: "../../static/img/4.webp",
+    detalles: [
+        "Limpieza y mantenimiento preventivo",
+        "Revisión y reparación de atascos de papel",
+        "Instalación y configuración de drivers"
+    ],
+    precio: "Desde $25"
+},
+    {
+        id: 5,
+        titulo: "Recuperación de Datos",
+        descripcion: "Recuperamos información perdida de discos duros, USB y otros dispositivos.",
+        imagen: "../../static/img/5.webp",
+        detalles: [
+            "Recuperación de datos eliminados o dañados",
+            "Soporte para discos duros y SSD",
+            "Recuperación de archivos en memorias USB y tarjetas SD"
+        ],
+        precio: "Desde $25"
+    },
+    {
+        id: 6,
+        titulo: "Eliminación de Virus y Seguridad",
+        descripcion: "Eliminamos virus, malware y mejoramos la seguridad de tu sistema.",
+        imagen: "../../static/img/6.webp",
+        detalles: [
+            "Eliminación de malware y virus",
+            "Instalación de antivirus y software de seguridad",
+            "Configuración de firewall y protección avanzada"
+        ],
+        precio: "Desde $20"
+    },
+    {
+        id: 7,
+        titulo: "Formateo e Instalación de Sistemas Operativos",
+        descripcion: "Instalamos y configuramos Windows, Linux y macOS en tu equipo.",
+        imagen: "../../static/img/7.webp",
+        detalles: [
+            "Formateo seguro del equipo",
+            "Instalación de sistemas operativos Windows, Linux y macOS",
+            "Optimización de rendimiento post-instalación"
+        ],
+        precio: "Desde $20"
+    },
+    {
+    id: 8,
+    titulo: "Creación de Páginas Web",
+    descripcion: "Desarrollo y diseño de páginas web adaptadas a las necesidades de tu negocio.",
+    imagen: "../../static/img/8.webp",
+    detalles: [
+        "Diseño responsivo y moderno",
+        "Optimización SEO para mejor posicionamiento",
+        "Integración con redes sociales y herramientas digitales",
+        "Desarrollo en HTML, CSS, JavaScript y frameworks modernos",
+        "Opciones de e-commerce, blogs y páginas corporativas"
+    ],
+    precio: "Desde $150 hasta $800 según requerimientos"
+}
+
+];
+
+    function generarServicios() {
+        const contenedorServicios = document.getElementById("servicios");
+        const contenedorModales = document.getElementById("modales");
+        contenedorServicios.innerHTML = "";
+        contenedorModales.innerHTML = "";
+
+        servicios.forEach(servicio => {
+            // Tarjetas de servicios
+            const servicioHTML = `
+                <div class="col-md-4 mb-4 service-item">
+                    <div class="card service-card">
+                        <img src="${servicio.imagen}" class="card-img-top" alt="${servicio.titulo}">
+                        <div class="card-body">
+                            <h5 class="card-title">${servicio.titulo}</h5>
+                            <p class="card-text">${servicio.descripcion}</p>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceModal${servicio.id}">Más Información</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            contenedorServicios.innerHTML += servicioHTML;
+
+            // Modales de servicios
+            const detallesHTML = servicio.detalles.map(detalle => `<li>${detalle}</li>`).join('');
+            const modalHTML = `
+                <div class="modal fade" id="serviceModal${servicio.id}" tabindex="-1" aria-labelledby="serviceModal${servicio.id}Label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="background-color: #333; color: white;">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="serviceModal${servicio.id}Label">${servicio.titulo}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h6>Características del servicio:</h6>
+                                <ul>${detallesHTML}</ul>
+                                <p><strong>Precio:</strong> ${servicio.precio}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="https://wa.me/+593963301897" class="btn btn-primary" target="_blank">Solicitar vía WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            contenedorModales.innerHTML += modalHTML;
+        });
+    }
+
+    generarServicios();
+</script>
+
 </body>
 </html>
